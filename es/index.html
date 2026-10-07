@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Yaniel Curbelo · Historial de trabajo</title>
+    <link rel="alternate" hreflang="en" href="../" />
+    <link rel="alternate" hreflang="es" href="./" />
+    <link rel="alternate" hreflang="pt" href="../pt/" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+    />
+    <link rel="stylesheet" href="../assets/style.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <div class="top">
+          <div class="eyebrow">Historial de Git · ShareIT Core &amp; AboveSports</div>
+          <nav class="lang" aria-label="Idioma">
+            <a href="../" hreflang="en">EN</a>
+            <a href="./" hreflang="es" aria-current="page">ES</a>
+            <a href="../pt/" hreflang="pt">PT</a>
+          </nav>
+        </div>
+        <h1>Yaniel Fundora Curbelo, historial de trabajo frontend</h1>
+        <p class="lede">
+          Todos los commits realizados entre julio de 2023 y octubre de 2026,
+          extraídos de <span class="mono">mis_logs.txt</span>. El trabajo se
+          reparte entre un producto de analítica de larga duración
+          (AboveSports) y una serie de proyectos para clientes en ShareIT: la
+          web de un despacho de abogados, una app de pedidos B2B, un design
+          system compartido y más de veinte webs con CMS.
+        </p>
+        <div class="range" id="range"></div>
+      </header>
+
+      <div class="kpis" id="kpis"></div>
+
+      <section>
+        <div class="sec-head">
+          <h2>Commits por mes</h2>
+          <p>
+            Coloreados según los cinco proyectos más grandes. El resto, sobre
+            todo webs de clientes en Umbraco, aparece en gris.
+          </p>
+        </div>
+        <div class="panel">
+          <div class="legend" id="legend-month"></div>
+          <div class="chart" id="chart-month" style="margin-top: 12px"></div>
+        </div>
+      </section>
+
+      <section>
+        <div class="sec-head">
+          <h2>Cronología de proyectos</h2>
+          <p>
+            Cada marca es un día con al menos un commit. Las filas están
+            ordenadas por el primer commit.
+          </p>
+        </div>
+        <div class="panel"><div class="chart" id="chart-timeline"></div></div>
+      </section>
+
+      <section>
+        <div class="sec-head">
+          <h2>Qué se construyó</h2>
+          <p>Resumido a partir de los mensajes de commit de cada proyecto.</p>
+        </div>
+        <div class="eras" id="eras"></div>
+      </section>
+
+      <section>
+        <div class="sec-head">
+          <h2>Ritmo de trabajo</h2>
+          <p>Horas de los commits según el reloj local.</p>
+        </div>
+        <div class="trio">
+          <div class="panel">
+            <h3>Hora del día</h3>
+            <div class="chart" id="chart-hour"></div>
+            <p class="note" id="note-hour"></p>
+          </div>
+          <div class="panel">
+            <h3>Día de la semana</h3>
+            <div class="chart" id="chart-week"></div>
+            <p class="note" id="note-week"></p>
+          </div>
+          <div class="panel">
+            <h3>Tipo de cambio</h3>
+            <div class="chart" id="chart-verb"></div>
+            <p class="note">Primera palabra de cada mensaje de commit.</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="sec-head">
+          <h2>Registro de commits</h2>
+          <p>
+            Busca en todo el historial por mensaje o filtra por un proyecto.
+          </p>
+        </div>
+        <div class="log-controls">
+          <input
+            id="q"
+            type="search"
+            placeholder="Buscar en mensajes, p. ej. biometric, storybook, report"
+            aria-label="Buscar en los mensajes de commit"
+          />
+          <select id="repo" aria-label="Filtrar por proyecto"></select>
+          <span class="log-count" id="log-count"></span>
+        </div>
+        <div class="log">
+          <table>
+            <tbody id="log-body"></tbody>
+          </table>
+        </div>
+        <button class="more" id="more" type="button">Mostrar más</button>
+      </section>
+
+      <footer id="foot"></footer>
+    </div>
+    <div class="tip" id="tip" hidden></div>
+
+    <script src="../assets/data.js"></script>
+    <script src="../assets/app.js"></script>
+  </body>
+</html>
