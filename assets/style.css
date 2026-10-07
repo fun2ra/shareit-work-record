@@ -556,3 +556,23 @@ footer {
   align-items: center;
   gap: 8px 16px;
 }
+.ident {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.avatar {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex: none;
+  border: 1px solid var(--rule);
+  display: block;
+}
+@media (max-width: 520px) {
+  .avatar {
+    width: 64px;
+    height: 64px;
+  }
+}
